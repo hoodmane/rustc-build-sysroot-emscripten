@@ -76,6 +76,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9560b07a799281c7e0958b9296854d6fafd4c5f31444a7e5bb1ad6dde5ccf1bd"
 dependencies = [
  "clap_builder",
+ "clap_derive",
 ]
 
 [[package]]
@@ -206,7 +207,6 @@ name = "rustc-build-sysroot-emscripten"
 version = "0.1.0"
 dependencies = [
  "clap",
- "clap_derive",
  "rustc-build-sysroot",
 ]
 

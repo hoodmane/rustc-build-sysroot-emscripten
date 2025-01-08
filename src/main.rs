@@ -1,4 +1,3 @@
-use clap_derive::Parser;
 use clap::Parser;
 // use rustc_version::VersionMeta;
 use rustc_build_sysroot::{BuildMode, SysrootBuilder, rustc_sysroot_src};
