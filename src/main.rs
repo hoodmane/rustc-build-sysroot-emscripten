@@ -10,6 +10,8 @@ struct Cli {
     /// The folder to put the sysroot into
     #[arg(short, long)]
     outdir: PathBuf,
+    #[arg(short, long)]
+    flags: Vec<String>,
 }
 
 fn build_sysroot(b: SysrootBuilder) {
@@ -25,5 +27,6 @@ fn main() {
     build_sysroot(
         SysrootBuilder::new(&args.outdir, "wasm32-unknown-emscripten")
             .build_mode(BuildMode::Build)
+            .rustflags(args.flags)
     );
 }
